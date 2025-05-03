@@ -14,9 +14,9 @@ RUN pip3 install --disable-pip-version-check --no-cache-dir \
     Pillow \
     pycryptodomex \
     cryptography
-    
+
+COPY test.py /home/vscode/workspace/test.py
+
 USER vscode
 
 RUN mkdir -p /home/vscode/workspace
-
-COPY test.py /home/vscode/workspace/test.py
