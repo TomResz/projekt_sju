@@ -6,8 +6,15 @@ FROM mcr.microsoft.com/vscode/devcontainers/python:${VARIANT}
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
 # Jupyter environment
-RUN pip3 install --disable-pip-version-check --no-cache-dir ipykernel jupyter
-
+RUN pip3 install --disable-pip-version-check --no-cache-dir \
+    ipykernel \
+    jupyter \
+    qiskit \
+    matplotlib \
+    Pillow \
+    pycryptodomex \
+    cryptography
+    
 USER vscode
 
 RUN mkdir -p /home/vscode/workspace
