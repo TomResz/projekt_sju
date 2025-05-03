@@ -13,7 +13,8 @@ RUN pip3 install --disable-pip-version-check --no-cache-dir \
     matplotlib \
     Pillow \
     pycryptodomex \
-    cryptography
+    cryptography \
+    pylatexenc
 
 COPY test.py /home/vscode/workspace/test.py
 
