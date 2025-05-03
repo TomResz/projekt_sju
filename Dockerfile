@@ -18,3 +18,5 @@ RUN pip3 install --disable-pip-version-check --no-cache-dir \
 USER vscode
 
 RUN mkdir -p /home/vscode/workspace
+
+COPY test.py /home/vscode/workspace/test.py
